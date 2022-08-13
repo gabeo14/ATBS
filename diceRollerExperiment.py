@@ -9,7 +9,7 @@ while sel != 'exit':
     print('Next roll:')
     sel = input() """
 
-print('Type selection and press enter: D2  D4  D6  D8  D10  D12 D20  D100')
+""" print('Type selection and press enter: D2  D4  D6  D8  D10  D12 D20  D100')
 print('Type exit to quit.')
 sel = input()
 
@@ -34,4 +34,17 @@ while sel != 'exit':
     else:
         print('Error: Invalid selection')
     print('Next selection?')
+    sel = input() """
+
+print('Type selection and press enter: D2  D4  D6  D8  D10  D12 D20  D100')
+print('Type exit to quit.')
+sel = input()
+
+def roller(strip): #strip is the stripped integer input
+    random.randint(1, strip)
+
+while sel != 'exit':
+    stripper = int(sel.lower().replace('d', ''))
+    print('You rolled ' + str(roller(stripper)))
+    print('Next selection:')
     sel = input()
