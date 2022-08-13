@@ -41,7 +41,7 @@ print('Type exit to quit.')
 sel = input()
 
 def roller(strip): #strip is the stripped integer input
-    random.randint(1, strip)
+    return random.randint(1, strip)
 
 while sel != 'exit':
     stripper = int(sel.lower().replace('d', ''))
