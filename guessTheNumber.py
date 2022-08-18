@@ -7,7 +7,7 @@ name = input()
 print('Well ' + name + ', I\'m thinking of a number between 1 and 20.')
 secretnumber = random.randint(1, 20)
 
-for guessesTaken in range(1, 7):
+for guessesTaken in range(1, 7): #loops 6 times then ends.
     print('Take a guess.')
     #print(secretnumber) #debug
     guess= int(input())
@@ -17,7 +17,10 @@ for guessesTaken in range(1, 7):
     elif guess > secretnumber:
         print('Too high. Guess again.')
     else:
-        break
+        break #breaks when guessed correctly
 
-print('Correct! the number is ' + str(secretnumber) + '!')
-print('You took ' + str(guessesTaken) + ' guesses.')
+if guess == secretnumber:
+    print('Correct! the number is ' + str(secretnumber) + '!')
+    print('You took ' + str(guessesTaken) + ' guesses.')
+else:
+    print('The number was ' + str(secretnumber) + '.')
